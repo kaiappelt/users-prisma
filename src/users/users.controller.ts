@@ -39,7 +39,7 @@ export class UsersController {
   }
 
   @Get()
-  // @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'))
   @ApiOperation({ summary: 'Listar de todos usuários' })
   @ApiOkResponse({
     description: 'Lista de usuário com sucesso',
@@ -56,7 +56,7 @@ export class UsersController {
   })
   @ApiResponse({ description: 'Usuário não encontrado' })
   @Get(':id')
-  // @UseGuards(AuthGuard('jwt'))
+  @UseGuards(AuthGuard('jwt'))
   findOne(@Param('id') id: number) {
     return this.usersService.findOne(+id);
   }
