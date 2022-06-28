@@ -17,3 +17,22 @@ model User {
   cpfCnpj  String
   password String
 }
+
+model Product {
+  id                 String     @id @default(uuid())
+  name               String     @unique
+  urlName            String     @unique
+  picture            String?
+  basePrice          Int
+  discountPercentage Int        @default(0)
+  stock              Int        @default(0)
+  description        String?
+  createdAt          DateTime   @default(now())
+  categories         Category[]
+}
+
+model Category {
+  id       String    @id @default(uuid())
+  name     String    @unique
+  products Product[]
+}

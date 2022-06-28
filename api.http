@@ -2,6 +2,10 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "username": "user1@user.com",
-    "password": "123456"
+    "email": "teste00@gmail.com",
+    "password": "Kai@123456"
 }
+###
+
+GET http://localhost:3000/test-auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwNzRlZDQzNS04NTdmLTRlNTUtOTc5My0xOTg4MjFiMDJkNzQifQ.eyJleHAiOjE2NTYzNTIxNzYsImlhdCI6MTY1NjM1MDM3NiwianRpIjoiODNkZTQ2MTMtZjZmMy00MDJmLWJhZjgtZjhjN2NkZmVlYjM3IiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3VzZXJzIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL3VzZXJzIiwic3ViIjoiZWM0MDczNDctYzFmMS00ZDU0LWE1N2MtZDk4NWI1NWZmMWQ2IiwidHlwIjoiUmVmcmVzaCIsImF6cCI6Im5lc3QiLCJzZXNzaW9uX3N0YXRlIjoiYzdlMDNkMTMtZDVmOS00ODY1LWFlMDEtOGY1ZGRkMDhiNDY5Iiwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiYzdlMDNkMTMtZDVmOS00ODY1LWFlMDEtOGY1ZGRkMDhiNDY5In0.5u8QMRviJS1p_FvpGgX0YJW8YOyfkdcygYSfNijHaMs

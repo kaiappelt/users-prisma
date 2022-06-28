@@ -1,14 +1,8 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { User } from '@prisma/client';
-import {
-  IsEmail,
-  IsNotEmpty,
-  IsString,
-  Length,
-  Matches,
-} from 'class-validator';
-import { MessagesHelper } from 'src/core/helpers/messages.helper';
-import { RegExHelper } from 'src/core/helpers/regex.helper';
+import { IsEmail, IsNotEmpty, IsString, Length } from 'class-validator';
+// import { MessagesHelper } from 'src/core/helpers/messages.helper';
+// import { RegExHelper } from 'src/core/helpers/regex.helper';
 
 export class CreateUserDto implements Omit<User, 'id'> {
   @ApiProperty({ example: 'teste@gmail.com' })
@@ -30,12 +24,12 @@ export class CreateUserDto implements Omit<User, 'id'> {
   })
   cpfCnpj: string;
 
-  @ApiProperty({ example: '123456' })
+  @ApiProperty({ example: 'Kai@123456' })
   @IsNotEmpty({ message: 'O campo "password" não pode ser vazio!' })
   @IsString({ message: 'O campo "password" deve ser umas string!' })
-  @Matches(RegExHelper.password, {
-    // message: 'error',
-    message: MessagesHelper.PASSWORD_VALID,
-  })
+  // @Matches(RegExHelper.password, {
+  //   // message: 'error',
+  //   message: MessagesHelper.PASSWORD_VALID,
+  // })
   password: string;
 }
